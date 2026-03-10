@@ -98,7 +98,8 @@ sessions = {}
 
 @app.route("/", methods=["GET"])
 def home():
-    return app.send_static_file("index.html")
+    with open("static/index.html", "r") as f:
+        return f.read(), 200, {"Content-Type": "text/html"}
 
 @app.route("/chat", methods=["POST"])
 def chat():
@@ -137,5 +138,6 @@ def chat():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
+
 
 
