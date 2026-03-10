@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <title>AI Hujaifa</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Sans:wght@600;700&display=swap" rel="stylesheet">
   <style>
@@ -21,11 +21,14 @@
     }
     *{margin:0;padding:0;box-sizing:border-box;}
 
+    html{height:100%; height:-webkit-fill-available;}
+
     body{
       background:var(--bg);
       font-family:'Inter',sans-serif;
       color:var(--text);
       height:100vh;
+      height:-webkit-fill-available;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -49,7 +52,9 @@
     }
 
     .chat-container{
-      width:100%;max-width:740px;height:100vh;
+      width:100%;max-width:740px;
+      height:100vh;
+      height:-webkit-fill-available;
       display:flex;flex-direction:column;
       position:relative;z-index:1;
     }
